@@ -1,0 +1,104 @@
+{
+  "manifest_version": 3,
+  "name": "AWS OmniConsole",
+  "version": "1.0.0",
+  "description": "Manage and switch between multiple AWS accounts with ease",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png"
+    },
+    "default_title": "AWS OmniConsole"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "alarms",
+    "tabs",
+    "notifications",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://*.aws.amazon.com/*",
+    "https://*.console.aws.amazon.com/*",
+    "https://signin.aws.amazon.com/*",
+    "https://*.awsapps.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.console.aws.amazon.com/*",
+        "https://console.aws.amazon.com/*"
+      ],
+      "js": ["src/content/aws-console.ts"],
+      "css": ["src/content/console-banner.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://signin.aws.amazon.com/*",
+        "https://*.signin.aws.amazon.com/*"
+      ],
+      "js": ["src/content/login-helper.ts"],
+      "run_at": "document_end"
+    }
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Open AWS OmniConsole"
+    },
+    "quick-switch-1": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1",
+        "mac": "Command+Shift+1"
+      },
+      "description": "Quick switch to account 1"
+    },
+    "quick-switch-2": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2",
+        "mac": "Command+Shift+2"
+      },
+      "description": "Quick switch to account 2"
+    },
+    "quick-switch-3": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+3",
+        "mac": "Command+Shift+3"
+      },
+      "description": "Quick switch to account 3"
+    },
+    "quick-switch-4": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+4",
+        "mac": "Command+Shift+4"
+      },
+      "description": "Quick switch to account 4"
+    },
+    "quick-switch-5": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+5",
+        "mac": "Command+Shift+5"
+      },
+      "description": "Quick switch to account 5"
+    }
+  }
+}

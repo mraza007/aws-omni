@@ -1,0 +1,50 @@
+{
+  "name": "aws-omniconsole",
+  "version": "1.0.0",
+  "description": "A browser extension that makes managing multiple AWS accounts less painful",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:firefox": "BROWSER=firefox vite",
+    "build": "vite build",
+    "build:firefox": "BROWSER=firefox vite build && node scripts/fix-firefox-manifest.js",
+    "build:all": "npm run build && npm run build:firefox",
+    "build:watch": "vite build --watch",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "aws",
+    "browser-extension",
+    "chrome-extension",
+    "firefox-addon"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@preact/signals": "^2.5.1",
+    "preact": "^10.28.1",
+    "zustand": "^5.0.9"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.3.0",
+    "@preact/preset-vite": "^2.10.2",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/preact": "^3.2.4",
+    "@types/node": "^25.0.3",
+    "@types/webextension-polyfill": "^0.12.4",
+    "autoprefixer": "^10.4.23",
+    "jsdom": "^27.4.0",
+    "postcss": "^8.5.6",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.16",
+    "webextension-polyfill": "^0.12.0"
+  }
+}

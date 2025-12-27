@@ -1,0 +1,70 @@
+#aws-switcher-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#aws-switcher-banner .aws-switcher-account {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#aws-switcher-banner .aws-switcher-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  box-shadow: 0 0 4px #22c55e;
+}
+
+#aws-switcher-banner .aws-switcher-id {
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+#aws-switcher-banner .aws-switcher-divider {
+  opacity: 0.5;
+  margin: 0 4px;
+}
+
+#aws-switcher-banner .aws-switcher-region {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+#aws-switcher-banner .aws-switcher-close {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.6;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+#aws-switcher-banner .aws-switcher-close:hover {
+  opacity: 1;
+}
+
+/* Push AWS console content down */
+body:has(#aws-switcher-banner) {
+  padding-top: 32px !important;
+}
