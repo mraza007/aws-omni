@@ -18,9 +18,7 @@ export function AccountCard({ account }: Props) {
 
   const handleDelete = (e: Event) => {
     e.stopPropagation();
-    if (confirm(`Delete "${account.name}"?`)) {
-      removeAccount(account.id);
-    }
+    removeAccount(account.id);
   };
 
   return (

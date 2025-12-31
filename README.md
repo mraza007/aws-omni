@@ -2,8 +2,8 @@
 
 <img src="icons/icon-128.png" alt="AWS OmniConsole" width="128" height="128">
 
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/YOUR_EXTENSION_ID?label=Chrome&logo=googlechrome&logoColor=white)](https://chrome.google.com/webstore/detail/YOUR_EXTENSION_ID)
-[![Firefox Add-ons](https://img.shields.io/amo/v/YOUR_ADDON_SLUG?label=Firefox&logo=firefox&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/YOUR_ADDON_SLUG/)
+[![Firefox Add-ons](https://img.shields.io/amo/v/aws-omniconsole?label=Firefox&logo=firefox&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/aws-omniconsole/)
+[![GitHub Release](https://img.shields.io/github/v/release/mraza007/aws-omni?label=Release&logo=github)](https://github.com/mraza007/aws-omni/releases)
 
 A browser extension that makes managing multiple AWS accounts less painful. Instead of juggling multiple browsers or digging through password managers, you can simply use this extension to have all your AWS accounts in one place.
 
@@ -21,19 +21,35 @@ I built this to scratch my own itch. I was using different browsers to stay logg
 
 ## Installation
 
-### Chrome
+### Firefox (Recommended)
 
-1. Download the latest release or build from source
-2. Open `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the `dist` folder
+Install from the official Firefox Add-ons store:
 
-### Firefox
+**[Install AWS OmniConsole for Firefox](https://addons.mozilla.org/en-US/firefox/addon/aws-omniconsole/)**
 
-1. Download the latest release or build from source
+### Chrome / Edge / Brave (Local Install)
+
+Chrome Web Store approval is pending. For now, install manually:
+
+1. Download `aws-omniconsole-chrome.zip` from the [latest release](https://github.com/mraza007/aws-omni/releases/latest)
+2. Extract the zip file to a folder
+3. Open `chrome://extensions/` in your browser
+4. Enable **Developer mode** (toggle in top right corner)
+5. Click **Load unpacked**
+6. Select the extracted folder
+7. The extension icon will appear in your toolbar
+
+### Firefox (Local/Temporary Install)
+
+For development or testing:
+
+1. Download `aws-omniconsole-firefox.zip` from the [latest release](https://github.com/mraza007/aws-omni/releases/latest)
 2. Open `about:debugging#/runtime/this-firefox`
-3. Click "Load Temporary Add-on"
-4. Select any file from the `dist-firefox` folder
+3. Click **Load Temporary Add-on**
+4. Select the downloaded `.zip` file
+5. The extension icon will appear in your toolbar
+
+> **Note**: Temporary add-ons are removed when Firefox closes. Use the Add-ons store for permanent installation.
 
 ## Building From Source
 

@@ -1,12 +1,15 @@
 {
   "manifest_version": 3,
   "name": "AWS OmniConsole",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Manage and switch between multiple AWS accounts with ease",
   "browser_specific_settings": {
     "gecko": {
       "id": "aws-switcher@extension.local",
-      "strict_min_version": "109.0"
+      "strict_min_version": "112.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "icons": {
@@ -28,10 +31,7 @@
   },
   "permissions": [
     "storage",
-    "activeTab",
-    "alarms",
     "tabs",
-    "notifications",
     "contextMenus"
   ],
   "host_permissions": [
@@ -45,15 +45,6 @@
     "type": "module"
   },
   "content_scripts": [
-    {
-      "matches": [
-        "https://*.console.aws.amazon.com/*",
-        "https://console.aws.amazon.com/*"
-      ],
-      "js": ["src/content/aws-console.ts"],
-      "css": ["src/content/console-banner.css"],
-      "run_at": "document_end"
-    },
     {
       "matches": [
         "https://signin.aws.amazon.com/*",
@@ -91,20 +82,6 @@
         "mac": "Command+Shift+3"
       },
       "description": "Quick switch to account 3"
-    },
-    "quick-switch-4": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+4",
-        "mac": "Command+Shift+4"
-      },
-      "description": "Quick switch to account 4"
-    },
-    "quick-switch-5": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+5",
-        "mac": "Command+Shift+5"
-      },
-      "description": "Quick switch to account 5"
     }
   }
 }

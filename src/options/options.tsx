@@ -308,13 +308,13 @@ function App() {
       </section>
 
       <footer class="footer">
-        <p>AWS OmniConsole v1.0.0</p>
+        <p>AWS OmniConsole v1.0.2</p>
         <p>
-          <a href="https://github.com/your-username/aws-switcher-extension" target="_blank" rel="noopener">
+          <a href="https://github.com/mraza007/aws-omni" target="_blank" rel="noopener">
             GitHub
           </a>
           {' | '}
-          <a href="https://github.com/your-username/aws-switcher-extension/issues" target="_blank" rel="noopener">
+          <a href="https://github.com/mraza007/aws-omni/issues" target="_blank" rel="noopener">
             Report an Issue
           </a>
         </p>
